@@ -1,10 +1,8 @@
 # Чат на node.js
-Chat, Node.js, Redis, Socket.io
+Chat, Node.js, Redis, Socket.io, EJS
 <ul>
-	<li>
-		Установка</li>
-	<li>
-		Инструкция</li>
+	<li>Установка</li>
+	<li>Инструкция</li>
 </ul>
 <h3><strong>Установка</strong></h3>
 <hr>
@@ -16,3 +14,11 @@ npm install
 </code>
 </pre>
 <h4>	3.) Установка Redis.oi https://redis.io/</h4>
+<p>Если redis установлен в консоли напишет "Connected to Redis!"</p>
+<hr>
+<h3><strong>Инструкция</strong></h3>
+<hr>
+<h4>	1.) Для входа в чат нужна регестрация</h4>
+<p>обязательные поля логин и пароль </p>
+<h4>	2.)Вводим логин и пароль и попадаем в чат</h4>
+<h4>	3.)В верхнем левом углу есть личный кабинет</h4>
