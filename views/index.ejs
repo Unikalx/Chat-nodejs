@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chat Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<ul class="pages">
+    <li class="chat page">
+        <div class="personal">
+            <form method="POST" action="/account">
+                <input style="display: none" name="id" value="test1">
+                <input class="btn btn-primary" type="submit" value="Personal Area">
+            </form>
+
+        </div>
+        <div class="chatArea">
+            <ul class="messages"></ul>
+        </div>
+        <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+        <div class="form">
+            <h3 class="title">What's your nickname?</h3>
+            <input class="usernameInput" placeholder="user name" type="text"/>
+            <input class="passwordInput" placeholder="password" type="password"/>
+        </div>
+        <div class="registr">
+            <a href="/register">Registrations</a>
+        </div>
+        <div class="error">
+            <p></p>
+        </div>
+    </li>
+</ul>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

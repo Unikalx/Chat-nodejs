@@ -1,0 +1,16 @@
+<%- include('blocks/head_tags') %>
+<body>
+<%- include('blocks/menu') %>
+
+<div class="container">
+    <h1><%= user.first_name %> <%= user.last_name %> <%= user.id %></h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Email: </strong><%= user.email %></li>
+        <li class="list-group-item"><strong>Phone: </strong><%= user.phone %></li>
+    </ul>
+    <a class="btn btn-default pull-left" href="/">Back</a>
+    <form method="POST" action="/delete/<%= user.id %>?_method=DELETE">
+        <input type="submit" class="btn btn-danger pull-right" value="Delete">
+    </form>
+</div>
+<%- include('blocks/footer') %>

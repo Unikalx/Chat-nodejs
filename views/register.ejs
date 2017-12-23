@@ -1,0 +1,57 @@
+<%- include('blocks/head_tags') %>
+<body>
+<%- include('blocks/menu') %>
+<div class="container">
+    <h1>Register User</h1>
+    <form registerUser method="POST" action="/register">
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" name="id" class="form-control" placeholder="User Name">
+            <label errorUser style="display: none" class="error_text">This field is required.</label>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
+            <label errorPassword style="display: none" class="error_text">This field is required.</label>
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="email" class="form-control" placeholder="Email Address">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Save">
+    </form>
+</div>
+</body><%- include('blocks/footer') %>
+<script>
+    $(document).ready(function () {
+        $('[registerUser]').on('submit', function (eventObject) {
+            let login = $('[name="id"]').val();
+            let password = $('[name="password"]').val();
+            if (login == '') {
+                $('[errorUser]').show();
+                eventObject.preventDefault();
+            } else {
+                $('[errorUser]').hide();
+            }
+            if (password == '') {
+                console.log('if2')
+                $('[errorPassword]').show();
+                eventObject.preventDefault();
+            } else {
+                $('[errorPassword]').hide();
+            }
+        });
+    })
+</script>

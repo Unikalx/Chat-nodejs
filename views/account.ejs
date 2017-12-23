@@ -1,0 +1,14 @@
+<%- include('blocks/head_tags') %>
+<body>
+<%- include('blocks/menu') %>
+<div class="container">
+    <h1>Search Users for admin</h1>
+    <%- error %>
+    <form class="form-inline" method="POST" action="/account">
+        <div class="form-group">
+            <input type="text" name="id" class="form-control" placeholder="Search Users By ID">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Search">
+    </form>
+</div>
+<%- include('blocks/footer') %>
